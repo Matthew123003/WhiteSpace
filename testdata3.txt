@@ -1,0 +1,19 @@
+At the core of the Java ecosystem is the JVM. Most people talk about Java the language,
+and this may sound odd coming from me, but I could hardly care less.
+What I really care about is the Java Virtual Machine as a concept, because that is the
+thing that ties it all together; it's the thing that makes Java the language possible;
+it's the thing that makes things work on all kinds of different platforms; and it
+makes all kinds of languages able to coexist.
+In the standard non-JVM world, people have lots of different languages,
+but it's really hard for them to coexist.
+They all manage memory differently.
+They all manage their sub-routine calling sequences differently.
+In the non JVM world being able to go back and forth between languages is almost impossible.
+In the Java world it's remarkably straightforward.
+I mean, there are some issues, but it’s remarkably straightforward to write a
+piece of your program in Java, a piece of your program in JavaScript and a
+piece of your program in Ruby. You can make things as God-awful as you want.
+It does kind of allow people to create incredible messes. But on the other
+hand you can use languages that are appropriate for the task at hand,
+and different languages are better at different things.
+Java happens to be a really good language for a broad spectrum of topics.
