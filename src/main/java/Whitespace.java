@@ -20,7 +20,23 @@ public class Whitespace {
         // count the number of whitepace chars and non-whitspace chars.
         // need to use a FOR loop.
         // print the results simply on a line #whitespaces, #ofnonwhitespacechars for each file.
+        int whitespaceCount = 0;
+        int nonWhitespaceCount = 0;
 
+        // Iterate over each character in the string
+        for (int i = 0; i < testdata.length(); i++) {
+            char ch = testdata.charAt(i);
+
+            // Check if the character is whitespace
+            if (ch == ' ' || ch == '\t' || ch == '\n' || ch == '\r' || ch == '\f') {
+                whitespaceCount++;
+            } else {
+                nonWhitespaceCount++;
+            }
+        }
+
+        // Print the counts
+        System.out.printf("%d, %d\n", whitespaceCount, nonWhitespaceCount);
     }
 
 
