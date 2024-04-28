@@ -16,7 +16,6 @@ public class Whitespace {
     }
 
     private void countBoth(String testdata) {
-
         // count the number of whitepace chars and non-whitspace chars.
         // need to use a FOR loop.
         // print the results simply on a line #whitespaces, #ofnonwhitespacechars for each file.
@@ -43,14 +42,51 @@ public class Whitespace {
     // what you CANNOT do is use `Character.isWhitespace()`
     // you have to "write your own" by checking the char against what you think is whitespace
     // you should also USE a FOR loop to step thru each char in the String.
-//    private void cannotDoThis(String input) {
-//        long wspc = input.chars()
-//                .mapToObj(a -> (char) a)
-//                .filter(c -> Character.isWhitespace(c)).count();
-//        long nwpsc = input.chars()
-//                .mapToObj(a -> (char) a)
-//                .filter(c -> !Character.isWhitespace(new Character(c))).count();
-//
-//        System.out.printf("%d, %d\n", wspc, nwpsc);
-//    }
+    private void cannotDoThis(String input) {
+        long wspc = input.chars()
+                .mapToObj(a -> (char) a)
+                .filter(c -> Character.isWhitespace(c)).count();
+        long nwpsc = input.chars()
+                .mapToObj(a -> (char) a)
+                .filter(c -> !Character.isWhitespace(new Character(c))).count();
+
+        System.out.printf("%d, %d\n", wspc, nwpsc);
+    }
+
+    private void countOnlyCharacters(String testdata){
+        int nonWhitespaceCount = 0;
+
+        // Iterate over each character in the string
+        for (int i = 0; i < testdata.length(); i++) {
+            char ch = testdata.charAt(i);
+
+            // Check if the character is whitespace
+            if (ch == ' ' || ch == '\t' || ch == '\n' || ch == '\r' || ch == '\f') {
+                continue;
+            } else {
+                nonWhitespaceCount++;
+            }
+        }
+
+        // Print the counts
+        System.out.printf("%d, %d\n", nonWhitespaceCount);
+    }
+
+    private void countOnlyWhiteSpace(String testdata){
+        int whitespaceCount = 0;
+
+        // Iterate over each character in the string
+        for (int i = 0; i < testdata.length(); i++) {
+            char ch = testdata.charAt(i);
+
+            // Check if the character is whitespace
+            if (ch == ' ' || ch == '\t' || ch == '\n' || ch == '\r' || ch == '\f') {
+                whitespaceCount++;
+                continue;
+            }
+        }
+
+        // Print the counts
+        System.out.printf("%d, %d\n", whitespaceCount);
+    }
 }
